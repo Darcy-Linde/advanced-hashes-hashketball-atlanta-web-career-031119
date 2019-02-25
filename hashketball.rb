@@ -230,6 +230,9 @@ def big_shoe_rebounds
            stats.each do |key, value|
              if key.to_s == "shoe"
                if value > shoe_size
+                 shoe_size = value
+                 largest_shoe = name_placeholder
+               end
              end
            end
         end
