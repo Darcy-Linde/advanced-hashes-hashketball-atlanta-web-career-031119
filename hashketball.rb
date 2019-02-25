@@ -157,12 +157,12 @@ end
 #team_colors
 def team_colors(team_name)
   game_hash.each do |location, team_data|
-    if team_data.values
-    team_data.each do |attribute, data|
-      if attribute.to_s == "colors" 
-        return data
-      end
-    end
+    return team_data.values
+    # team_data.each do |attribute, data|
+    #   if attribute.to_s == "colors" 
+    #     return data
+    #   end
+    # end
   end
 end
 
