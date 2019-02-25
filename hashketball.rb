@@ -174,6 +174,7 @@ def team_names
       team_data.each do |key, value|
         if key.to_s == "team_name"
           names_array << value
+        end
       end
   end
   names_array
