@@ -209,11 +209,7 @@ def player_stats(player)
       if attribute.to_s == "players"
         data.each do |name, stats|
           if name == player 
-            stats.each do |key, value|
-              if key.to_s == "points" 
-                return value
-              end
-            end
+            return stats
           end
         end
       end
