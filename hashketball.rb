@@ -183,7 +183,15 @@ end
 #player_numbers
 # returns an array of the jersey number's for that team
 def player_numbers(team_name)
-  
+  game_hash.each do |location, team_data|
+    if team_data.values.include?(team_name)
+      team_data.each do |attribute, data|
+        if attribute.to_s == "players" 
+          
+        end
+      end
+    end
+  end
 end
 
 #player_stats
