@@ -222,7 +222,15 @@ def big_shoe_rebounds
   largest_shoe = ""
   shoe_size = -1.0/0
   game_hash.each do |location, team_data|
-    
+    team_data.each do |attribute, data|
+      if attribute.to_s == "players"
+        data.each do |name, stats|
+          if name == player 
+            return stats
+          end
+        end
+      end
+    end
   end
 end
 
