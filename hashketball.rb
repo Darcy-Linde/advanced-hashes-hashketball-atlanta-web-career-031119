@@ -169,7 +169,7 @@ end
 
 #team_names
 def team_names
-
+  names_array = []
 end
 
 #player_numbers
