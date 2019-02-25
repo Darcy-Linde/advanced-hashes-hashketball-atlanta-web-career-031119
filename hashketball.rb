@@ -204,7 +204,20 @@ end
 
 #player_stats
 def player_stats(player)
-  
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute.to_s == "players"
+        data.each do |name, stats|
+          if name == player 
+            stats.each do |key, value|
+              if key.to_s == "points" 
+                return value
+              end
+            end
+          end
+        end
+      end
+    end
 end
 
 #big_shoe_rebounds
