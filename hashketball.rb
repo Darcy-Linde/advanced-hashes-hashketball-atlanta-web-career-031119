@@ -239,6 +239,22 @@ def big_shoe_rebounds
       end
     end
   end
+  
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute.to_s == "players"
+        data.each do |name, stats|
+          if name == player 
+            stats.each do |key, value|
+              if key.to_s == "rebounds" 
+                return value
+              end
+            end
+          end
+        end
+      end
+    end
+  end
 end
 
 
