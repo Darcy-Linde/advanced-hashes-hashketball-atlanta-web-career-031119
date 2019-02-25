@@ -189,7 +189,11 @@ def player_numbers(team_name)
       team_data.each do |attribute, data|
         if attribute.to_s == "players" 
           data.each do |name, stats|
-            
+            stats.each do |key, value|
+              if key.to_s == "number"
+                jersey_array << value
+              end
+            end
           end
         end
       end
