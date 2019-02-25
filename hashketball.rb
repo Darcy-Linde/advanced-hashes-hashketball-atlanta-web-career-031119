@@ -171,9 +171,9 @@ end
 def team_names
   names_array = []
   game_hash.each do |location, team_data|
-    if team_data.to_s == "team_name"
       team_data.each do |key, value|
-        
+        if key.to_s == "team_name"
+          names_array << value
       end
   end
   names_array
